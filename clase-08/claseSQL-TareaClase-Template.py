@@ -17,7 +17,7 @@ def main():
     print("# Creamos/Importamos los datasets que vamos a utilizar en este programa")
     print("# =============================================================================")
 
-    carpeta = "~/Descargas/clase-08/"
+    carpeta = "~/Descargas/labodedatos_verano2024/clase-08/"
     
     # Ejercicios AR-PROJECT, SELECT, RENAME
     empleado       = get_empleado()
@@ -195,7 +195,11 @@ def main():
     consigna    = """a1.- Listar a los alumnos que cursan BDs o TLENG"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM alumnosBD
+                   UNION
+                   SELECT DISTINCT *
+                   FROM alumnosTLeng
                   """
 
     imprimirEjercicio(consigna, [alumnosBD, alumnosTLeng], consultaSQL, sql^consultaSQL)    
@@ -205,7 +209,11 @@ def main():
     consigna    = """a2.- Listar a los alumnos que cursan BDs o TLENG (usando UNION ALL)"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM alumnosBD
+                   UNION ALL
+                   SELECT DISTINCT *
+                   FROM alumnosTLeng
                   """
 
     imprimirEjercicio(consigna, [alumnosBD, alumnosTLeng], consultaSQL, sql^consultaSQL)    
@@ -215,7 +223,11 @@ def main():
     consigna    = """b.- Listar a los alumnos que cursan simultáneamente BDs y TLENG"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM alumnosBD
+                   INTERSECT
+                   SELECT DISTINCT *
+                   FROM alumnosTLeng
                   """
 
     imprimirEjercicio(consigna, [alumnosBD, alumnosTLeng], consultaSQL, sql^consultaSQL)    
@@ -225,7 +237,11 @@ def main():
     consigna    = """c.- Listar a los alumnos que cursan BDs y no cursan TLENG """
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM alumnosBD
+                   EXCEPT
+                   SELECT DISTINCT *
+                   FROM alumnosTLeng
                   """
 
     imprimirEjercicio(consigna, [alumnosBD, alumnosTLeng], consultaSQL, sql^consultaSQL)    
@@ -251,21 +267,36 @@ def main():
     
     consigna    = "Ejercicio 02.1.- Devolver los números de vuelo que tienen reservas generadas (utilizar intersección)"
     consultaSQL = """
-                   
+                   SELECT DISTINCT numero
+                   FROM vuelo
+                   INTERSECT
+                   SELECT DISTINCT nrovuelo
+                   FROM reserva
                   """
     imprimirEjercicio(consigna, [vuelo, aeropuerto, pasajero, reserva], consultaSQL, sql^consultaSQL)    
 
     # -----------
     consigna    = "Ejercicio 02.2.- Devolver los números de vuelo que aún no tienen reservas"
     consultaSQL = """
-                   
+                   SELECT DISTINCT numero
+                   FROM vuelo
+                   EXCEPT
+                   SELECT DISTINCT nrovuelo
+                   FROM reserva
                   """
     imprimirEjercicio(consigna, [vuelo, aeropuerto, pasajero, reserva], consultaSQL, sql^consultaSQL)    
 
     # -----------
     consigna    = "Ejercicio 02.3.- Retornar los códigos de aeropuerto de los que parten o arriban los vuelos"
     consultaSQL = """
-                   
+                   SELECT DISTINCT origen AS codigo
+                   FROM vuelo
+                   UNION
+                   SELECT DISTINCT destino
+                   FROM vuelo
+                   INTERSECT
+                   SELECT DISTINCT codigo
+                   FROM aeropuerto
                   """
     imprimirEjercicio(consigna, [vuelo, aeropuerto, pasajero, reserva], consultaSQL, sql^consultaSQL)    
 
@@ -290,7 +321,10 @@ def main():
     consigna    = """a1.- Listar el producto cartesiano entre las tablas persona y nacionalidades"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM persona
+                   CROSS JOIN
+                   nacionalidades
                   """
 
     imprimirEjercicio(consigna, [persona, nacionalidades], consultaSQL, sql^consultaSQL)
@@ -300,7 +334,8 @@ def main():
     consigna    = """a2.- Listar el producto cartesiano entre las tablas persona y nacionalidades (sin usar CROSS JOIN)"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM persona, nacionalidades
                   """
 
     imprimirEjercicio(consigna, [persona, nacionalidades], consultaSQL, sql^consultaSQL)
@@ -316,7 +351,10 @@ def main():
     consigna    = """b1.- Vincular las tablas persona y nacionalidades a través de un INNER JOIN"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM persona
+                   INNER JOIN nacionalidades
+                   ON nacionalidad = idn
                   """
 
     imprimirEjercicio(consigna, [persona, nacionalidades], consultaSQL, sql^consultaSQL)
@@ -326,7 +364,9 @@ def main():
     consigna    = """b2.- Vincular las tablas persona y nacionalidades (sin usar INNER JOIN)"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM persona, nacionalidades
+                   WHERE nacionalidad = idn
                   """
 
     imprimirEjercicio(consigna, [persona, nacionalidades], consultaSQL, sql^consultaSQL)
@@ -336,7 +376,10 @@ def main():
     consigna    = """c.- Vincular las tablas persona y nacionalidades a través de un LEFT OUTER JOIN"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM persona
+                   LEFT OUTER JOIN nacionalidades
+                   ON nacionalidad = idn
                   """
 
     imprimirEjercicio(consigna, [persona, nacionalidades], consultaSQL, sql^consultaSQL)
@@ -349,7 +392,11 @@ def main():
     consigna    = """a.- Vincular las tablas Se_inscribe_en y Materia. Mostrar sólo LU y Nombre de materia"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT lu, nombre
+                   FROM se_inscribe_en AS sie
+                   INNER JOIN
+                   materia AS m
+                   ON sie.codigo_materia = m.codigo_materia
                   """
 
     imprimirEjercicio(consigna, [persona, nacionalidades], consultaSQL, sql^consultaSQL)
@@ -377,7 +424,11 @@ def main():
     consigna    = "Ejercicio 03.1.- Devolver el nombre de la ciudad de partida del vuelo número 165"
 
     consultaSQL = """
-                    
+                    SELECT DISTINCT nombre
+                    FROM vuelo
+                    INNER JOIN aeropuerto
+                    ON origen = codigo
+                    WHERE numero = 165
                   """
 
     imprimirEjercicio(consigna, [vuelo, aeropuerto, pasajero, reserva], consultaSQL, sql^consultaSQL)    
@@ -386,7 +437,11 @@ def main():
     consigna    = "Ejercicio 03.2.- Retornar el nombre de las personas que realizaron reservas a un valor menor a $200"
 
     consultaSQL = """
-                    
+                    SELECT nombre
+                    FROM reserva
+                    INNER JOIN pasajero
+                    ON reserva.dni = pasajero.dni
+                    WHERE precio < 200
                   """
 
     imprimirEjercicio(consigna, [vuelo, aeropuerto, pasajero, reserva], consultaSQL, sql^consultaSQL)    
@@ -395,8 +450,19 @@ def main():
     consigna    = "Ejercicio 03.3.- Obtener Nombre, Fecha y Destino del Viaje de todos los pasajeros que vuelan desde Madrid"
 
 
+    pasajero_reserva = sql^"""
+                            SELECT *
+                            FROM pasajero
+                            INNER JOIN reserva
+                            ON pasajero.dni = reserva.dni
+                           """
+
     consultaSQL = """
-                    
+                    SELECT nombre, fecha, destino
+                    FROM pasajero_reserva
+                    INNER JOIN vuelo
+                    ON nrovuelo
+                    WHERE origen = 'MAD'
                   """
     imprimirEjercicio(consigna, [vuelo, aeropuerto, pasajero, reserva], consultaSQL, sql^consultaSQL)    
 
@@ -419,7 +485,9 @@ def main():
     consigna    = """a.- Vincular las tablas Reserva, Pasajero y Vuelo. Mostrar sólo Fecha de reserva, hora de salida del vuelo y nombre de pasajero."""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT p.nombre, r.fecha, v.destino
+                   FROM reserva AS r, pasajero AS p, vuelo AS v
+                   WHERE r.dni = p.dni AND r.nrovuelo = v.numero 
                   """
 
     imprimirEjercicio(consigna, [reserva, pasajero, vuelo], consultaSQL, sql^consultaSQL)
@@ -432,7 +500,9 @@ def main():
     consigna    = """a.- Vincular (JOIN)  EmpleadoRol y RolProyecto para obtener la tabla original EmpleadoRolProyecto"""
     
     consultaSQL = """
-                   
+                   SELECT DISTINCT *
+                   FROM empleadoRol as e
+                   INNER JOIN   
                   """
 
     imprimirEjercicio(consigna, [empleadoRol, rolProyecto], consultaSQL, sql^consultaSQL)
@@ -444,7 +514,8 @@ def main():
     consigna    = """a.- Usando sólo SELECT contar cuántos exámenes fueron rendidos (en total)"""
     
     consultaSQL = """
-                    
+                    SELECT COUNT(*) AS cantidadexamenes
+                    FROM examen
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
@@ -454,7 +525,9 @@ def main():
     consigna    = """b1.- Usando sólo SELECT contar cuántos exámenes fueron rendidos en cada Instancia"""
     
     consultaSQL = """
-                    
+                    SELECT instancia, COUNT(*) AS cantidadexamenes
+                    FROM examen
+                    GROUP BY instancia 
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
@@ -464,7 +537,10 @@ def main():
     consigna    = """b2.- Usando sólo SELECT contar cuántos exámenes fueron rendidos en cada Instancia (ordenado por instancia)"""
     
     consultaSQL = """
-
+                    SELECT instancia, COUNT(*) AS cantidadexamenes
+                    FROM examen
+                    GROUP BY instancia 
+                    ORDER BY instancia ASC
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
@@ -474,7 +550,11 @@ def main():
     consigna    = """b3.- Ídem ejercicio anterior, pero mostrar sólo las instancias a las que asistieron menos de 4 Estudiantes"""
     
     consultaSQL = """
-
+                    SELECT instancia, COUNT(*) AS cantidadexamenes
+                    FROM examen
+                    GROUP BY instancia 
+                    HAVING cantidadexamenes < 4
+                    ORDER BY instancia ASC
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
@@ -484,7 +564,10 @@ def main():
     consigna    = """c.- Mostrar el promedio de edad de los estudiantes en cada instancia de examen"""
     
     consultaSQL = """
-                     
+                     SELECT instancia,
+                            ROUND(AVG(Edad), 2) as promedioedad
+                     FROM examen
+                     GROUP BY instancia 
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
@@ -497,7 +580,11 @@ def main():
     consigna    = """a1.- Mostrar cuál fue el promedio de notas en cada instancia de examen, sólo para instancias de parcial."""
     
     consultaSQL = """
-                     
+                     SELECT instancia,
+                            ROUND(AVG(nota), 2) as promedionota
+                     FROM examen
+                     GROUP BY instancia 
+                     HAVING instancia LIKE 'Parcial%'
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
@@ -520,7 +607,15 @@ def main():
     consigna    = """a1.- Listar a cada alumno que rindió el Parcial-01 y decir si aprobó o no (se aprueba con nota >=4)."""
     
     consultaSQL = """
-                    
+                    SELECT nombre, 
+                           nota,
+                           CASE WHEN nota >= 4
+                             THEN 'APROBÓ'
+                             ELSE 'DESAPROBÓ'
+                           END AS estado
+                    FROM examen
+                    WHERE instancia='Parcial-01'
+                    ORDER BY nombre
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
@@ -530,7 +625,15 @@ def main():
     consigna    = """a2.- Modificar la consulta anterior para que informe cuántos estudiantes aprobaron/reprobaron en cada instancia."""
     
     consultaSQL = """
-                    
+                    SELECT instancia, 
+                           CASE WHEN nota >= 4
+                             THEN 'APROBÓ'
+                             ELSE 'DESAPROBÓ'
+                           END AS estado,
+                           COUNT(*) AS cantidad
+                    FROM examen
+                    GROUP BY instancia, estado
+                    ORDER BY instancia, estado
                   """
 
     imprimirEjercicio(consigna, [examen], consultaSQL, sql^consultaSQL)
