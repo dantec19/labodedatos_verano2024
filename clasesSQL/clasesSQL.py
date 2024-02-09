@@ -17,7 +17,7 @@ def main():
     print("# Creamos/Importamos los datasets que vamos a utilizar en este programa")
     print("# =============================================================================")
 
-    carpeta = "~/Descargas/labodedatos_verano2024/clase-08/"
+    carpeta = "archivos-clase/"
     
     # Ejercicios AR-PROJECT, SELECT, RENAME
     empleado       = get_empleado()

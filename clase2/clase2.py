@@ -1,8 +1,15 @@
 #%%
-
 # EJERCICIOS/APUNTES EN CLASE
 
-from clase1.clase1 import traducir_a_geringoso
+def traducir_a_geringoso(cadena):
+    capadepenapa = ""
+    vocales = {'a','e','i','o','u'}
+    for c in range(len(cadena)):
+        capadepenapa += cadena[c]
+        if cadena[c].lower() in vocales:
+            capadepenapa += 'p' + cadena[c].lower()
+            
+    return capadepenapa
 
 #%%%
 """
@@ -107,17 +114,15 @@ Definir una función materias_cuatrimestre(nombre_archivo, n) que recorra el arc
 conteniendo información de un cronograma sugerido de cursada, y devuelva una lista de diccionarios con la
 información de las materias sugeridas para cursar el n-ésimo cuatrimestre.
 """
+import csv
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+def materias_cuatrimestre(n, nombre_archivo='cronograma_sugerido.csv'):
+    lista = []
+    with open('archivos/' + nombre_archivo, 'rt', encoding='utf-8') as f:
+        filas = csv.reader(f)
+        encabezado = next(filas)
+        for fila in filas:
+            registro = dict(zip(encabezado,fila)) # armo el diccionario de cada fila
+            if int(registro['Cuatrimestre']) == n:
+                lista.append(registro) # lo agrego a la lista
+    return lista
