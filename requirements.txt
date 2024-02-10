@@ -1,4 +1,3 @@
 numpy
 pandas
 inline_sql
-spyder-kernels==2.5.*
