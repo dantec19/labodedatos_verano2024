@@ -111,6 +111,50 @@ def main():
                   """
     imprimirEjercicio(consigna, [departamento], consultaSQL, sql^consultaSQL)
     
+    
+    print()
+    print("# =============================================================================")
+    print("# EJERCICIO B: Consultas multitabla (INNER JOIN)")
+    print("# =============================================================================")
+    
+    consigna = "a. Devolver una lista con los código y nombres de departamentos, asociados al nombre de la provincia al que pertenecen."
+    consultaSQL = """
+                   SELECT d.id, d.descripcion, p.descripcion AS nombre_provincia
+                   FROM departamento AS d
+                   INNER JOIN provincia AS p
+                   ON d.id_provincia=p.id
+                  """
+    imprimirEjercicio(consigna, [provincia, departamento], consultaSQL, sql^consultaSQL)
+    
+    
+    # -----------
+    consigna = "c. Devolver los casos registrados en la provincia de 'Chaco'."
+    consultaSQL = """
+                   SELECT c.*
+                   FROM casos AS c
+                   INNER JOIN departamento AS d
+                   ON id_depto=d.id
+                   INNER JOIN provincia AS p
+                   ON d.id_provincia=p.id
+                   WHERE p.descripcion = 'Chaco'
+                  """
+    imprimirEjercicio(consigna, [provincia, departamento, casos], consultaSQL, sql^consultaSQL)
+    
+    
+    # -----------
+    consigna = "d. Devolver aquellos casos de la provincia de 'Buenos Aires' cuyo campo cantidad supere los 10 casos."
+    consultaSQL = """
+                   SELECT c.*
+                   FROM casos AS c
+                   INNER JOIN departamento AS d
+                   ON id_depto=d.id
+                   INNER JOIN provincia AS p
+                   ON d.id_provincia=p.id
+                   WHERE p.descripcion = 'Buenos Aires' AND c.cantidad > 10
+                  """
+    imprimirEjercicio(consigna, [provincia, departamento, casos], consultaSQL, sql^consultaSQL)
+    
+    
 # =============================================================================
 # DEFINICION DE FUNCIÓN DE IMPRESIÓN EN PANTALLA
 # =============================================================================
