@@ -40,13 +40,13 @@ pais = sql^"""
           INNER JOIN pbi_per_capita AS pbi ON s.pais_iso_3 = pbi.codigo_pais
         """
 
-sede = """
+sede = sql^"""
           SELECT DISTINCT s.pais_iso_3, s.sede_id, secc.tipo_seccion
           FROM sede_completo AS s
           INNER JOIN sede_secciones AS secc ON s.sede_id = secc.sede_id
         """
         
-redes = """
+redes = sql^"""
           SELECT *, 
           CASE 
             WHEN LOWER(url) LIKE '%facebook%'
@@ -66,9 +66,47 @@ redes = """
           WHERE red_social IS NOT NULL
         """
         
-        
-        
-        
+ejercicioHI = sql^"""
+                
+             """
+             
+ejercicioIIaux = sql^"""
+                  SELECT DISTINCT p.region_geografica, s.sede_id, p.pbi_pc_2022
+                  FROM pais AS p
+                  INNER JOIN sede AS s
+                  ON p.pais_iso_3 = s.pais_iso_3
+                """
+             
+ejercicioII = sql^"""
+                SELECT region_geografica, COUNT(sede_id), AVG(pbi_pc_2022)
+                FROM ejercicioIIaux
+                GROUP BY region_geografica
+             """
+             
+ejercicioIIIaux = sql^"""
+                SELECT p.nombre_pais, r.red_social, COUNT(r.red_social)
+                FROM redes AS r
+                INNER JOIN sede AS s 
+                ON r.sede_id = s.sede_id
+                INNER JOIN pais AS p
+                ON p.pais_iso_3 = s.pais_iso_3
+                GROUP BY p.nombre_pais, r.red_social
+             """    
+             
+ejercicioIII = sql^"""
+                SELECT nombre_pais, COUNT(red_social)
+                FROM ejercicioIIIaux
+                GROUP BY nombre_pais
+               """
+
+ejercicioIV = sql^"""
+                SELECT p.nombre_pais, s.sede_id, r.red_social, r.url
+                FROM redes AS r
+                INNER JOIN sede AS s 
+                ON r.sede_id = s.sede_id
+                INNER JOIN pais AS p
+                ON p.pais_iso_3 = s.pais_iso_3
+             """
         
         
         
