@@ -1,3 +1,4 @@
 inline_sql
 matplotlib
 matplotlib.pyplot
+seaborn
