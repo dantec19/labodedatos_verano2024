@@ -9,6 +9,7 @@ Created on Fri Feb 16 15:51:27 2024
 import pandas as pd
 import numpy as np
 from inline_sql import sql, sql_val
+import matplotlib.pyplot as plt
 
 
 carpeta = "datasets/"
@@ -95,12 +96,13 @@ promedio_secciones = sql^"""
                       """
 
 ejercicioHI = sql^"""
-              SELECT DISTINCT p.nombre_pais, cs.sedes, ps.secciones_promedio, p.pbi_pc_2022
+              SELECT DISTINCT UPPER(p.nombre_pais) AS nombre_pais, cs.sedes, ps.secciones_promedio, p.pbi_pc_2022
               FROM pais AS p
               INNER JOIN cuenta_sedes_por_pais AS cs
               ON p.pais_iso_3 = cs.pais_iso_3
               INNER JOIN promedio_secciones AS ps
               ON p.pais_iso_3 = ps.pais_iso_3
+              ORDER BY cs.sedes DESC, p.nombre_pais ASC
           """
 #%%%
 ejercicioIIaux = sql^"""
@@ -114,6 +116,7 @@ ejercicioII = sql^"""
              SELECT region_geografica, COUNT(pais_iso_3) AS paises_con_sedes_arg, AVG(pbi_pc_2022) AS promedio_pbi_per_capita
              FROM ejercicioIIaux
              GROUP BY region_geografica
+             ORDER BY promedio_pbi_per_capita DESC
           """
 #%%%    
 ejercicioIIIaux = sql^"""
@@ -132,11 +135,13 @@ ejercicioIII = sql^"""
             """
 #%%%
 ejercicioIV = sql^"""
-             SELECT p.nombre_pais, s.sede_id, r.red_social, r.url
+             SELECT DISTINCT UPPER(p.nombre_pais), s.sede_id, r.red_social, r.url
              FROM redes AS r
              INNER JOIN sede AS s 
              ON r.sede_id = s.sede_id
              INNER JOIN pais AS p
              ON p.pais_iso_3 = s.pais_iso_3
+             ORDER BY p.nombre_pais ASC, s.sede_id ASC, r.red_social ASC, r.url ASC
           """
 #%%%  
+
