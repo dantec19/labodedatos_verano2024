@@ -23,13 +23,13 @@ sede_completo = pd.read_csv(carpeta + "sede-completo.csv", usecols=list(range(0,
 
 sede_secciones = pd.read_csv(carpeta + "sede-secciones.csv")
 
-# Cargamos los datos del PBI
-pbi_per_capita = pd.read_csv(carpeta + "pbipercapita.csv", header=2)
+# Cargamos los datos del pib
+pib_per_capita = pd.read_csv(carpeta + "pbipercapita.csv", header=2)
 
 # Cambiamos los nombres de las columnas que usamos y tienen espacios o números
 # para facilitar las consultas de SQL
-pbi_per_capita = pbi_per_capita.rename(
-    columns={"Country Code": "pais_iso_3", "2022": "pbi_pc_2022"}
+pib_per_capita = pib_per_capita.rename(
+    columns={"Country Code": "pais_iso_3", "2022": "pib_pc_2022"}
 )
 
 #%%% LIMPIEZA DE DATOS
@@ -54,9 +54,9 @@ sede = sql^"""
            """
            
 pib = sql^"""
-           SELECT DISTINCT pbi.pais_iso_3,
-                           pbi.pbi_pc_2022
-           FROM   pbi_per_capita AS pbi
+           SELECT DISTINCT pais_iso_3,
+                           pib_pc_2022
+           FROM   pib_per_capita
            """
            
 
@@ -104,7 +104,7 @@ redes = sql^"""
 #%%% EJERCICIO 1
 consigna = """
 Para cada país informar cantidad de sedes, cantidad de secciones en
-promedio que poseen sus sedes y el PBI per cápita del país en 2022. El
+promedio que poseen sus sedes y el PIB per cápita del país en 2022. El
 orden del reporte debe respetar la cantidad de sedes (de manera
 descendente). En caso de empate, ordenar alfabéticamente por nombre de
 país.
@@ -162,7 +162,7 @@ promedio_secciones = sql^"""
                         """
 
 # Juntamos el nombre de los paises, la cantidad de sedes, el promedio de
-# secciones por sede y el pbi per capita
+# secciones por sede y el pib per capita
 ejercicioI = sql^"""
                  SELECT DISTINCT pib.pais_iso_3,
                                  cs.sedes,
@@ -170,13 +170,13 @@ ejercicioI = sql^"""
                                      WHEN cs.sedes = 0 THEN 0
                                      ELSE ps.secciones_promedio 
                                  END AS promedio_sedes,
-                                 pib.pbi_pc_2022
+                                 pib.pib_pc_2022
                  FROM   pib
                         INNER JOIN cuenta_sedes_por_pais AS cs
                                 ON pib.pais_iso_3 = cs.pais_iso_3
                         LEFT OUTER JOIN promedio_secciones AS ps
                                 ON pib.pais_iso_3 = ps.pais_iso_3
-                 WHERE  pib.pbi_pc_2022 IS NOT NULL
+                 WHERE  pib.pib_pc_2022 IS NOT NULL
                  ORDER  BY cs.sedes DESC,
                            pib.pais_iso_3 ASC 
                  """
@@ -191,11 +191,11 @@ de dichos países. Ordenar por el promedio del PBI per Cápita.
 """
 
 # Obtenemos todos los países que están en la base de sede (es decir que tienen
-# alguna sede argentina) con su región geográfica y PBI per Capita
-pbi_paises_con_sede = sql^"""
+# alguna sede argentina) con su región geográfica y pib per Capita
+pib_paises_con_sede = sql^"""
                           SELECT DISTINCT p.region_geografica,
                                           p.pais_iso_3,
-                                          pib.pbi_pc_2022
+                                          pib.pib_pc_2022
                           FROM   pais AS p
                                  INNER JOIN sede AS s
                                          ON p.pais_iso_3 = s.pais_iso_3
@@ -203,15 +203,15 @@ pbi_paises_con_sede = sql^"""
                           """
 
 # Conseguimos la cantidad de países con sedes argentinas en cada región
-# geográfica y el promedio del PBI Per Capita de estos a partir de la tabla
+# geográfica y el promedio del pib Per Capita de estos a partir de la tabla
 # anterior
 ejercicioII = sql^"""
                   SELECT region_geografica,
                          Count(pais_iso_3) AS paises_con_sedes_arg,
-                         Avg(pbi_pc_2022)  AS promedio_pbi_per_capita
-                  FROM   pbi_paises_con_sede
+                         Avg(pib_pc_2022)  AS promedio_pib_per_capita
+                  FROM   pib_paises_con_sede
                   GROUP  BY region_geografica
-                  ORDER  BY promedio_pbi_per_capita DESC 
+                  ORDER  BY promedio_pib_per_capita DESC 
                   """
 
 # Imprimimos el resultado
@@ -334,12 +334,12 @@ países donde Argentina tiene una delegación. Mostrar todos los boxplots en una
 misma figura, ordenados por la mediana de cada región.
 """
 
-# Para realizar este ejercicio, nos sirve la base de datos pbi_paises_con_sede, 
+# Para realizar este ejercicio, nos sirve la base de datos pib_paises_con_sede, 
 # armada en el ejercicio 2 de las consultas SQL
 
 # Agregamos saltos de linea en los nombres de las regiones para que entren en
 # el gráfico
-pbi_paises_con_sede["region_geografica"] = pbi_paises_con_sede["region_geografica"].replace(
+pib_paises_con_sede["region_geografica"] = pib_paises_con_sede["region_geografica"].replace(
     ["ÁFRICA  DEL  NORTE  Y  CERCANO  ORIENTE",
      "EUROPA  CENTRAL  Y  ORIENTAL",
      "AMÉRICA  CENTRAL  Y  CARIBE",
@@ -360,8 +360,8 @@ pbi_paises_con_sede["region_geografica"] = pbi_paises_con_sede["region_geografic
 # mediana de forma decreciente
 ax = sns.boxplot(
     x="region_geografica",
-    y="pbi_pc_2022",
-    data=pbi_paises_con_sede,
+    y="pib_pc_2022",
+    data=pib_paises_con_sede,
     order=[
         "OCEANÍA",
         "AMÉRICA  DEL\nNORTE",
@@ -380,12 +380,12 @@ sns.set(rc={"figure.figsize": (18.7, 8.27)})
 
 # Agregamos titulo, etiquetas a los ejes y limita el rango de valores de los ejes
 ax.set_title(
-    "PBI Per Capita de Paises con Sedes Argentinas según Región Geográfica",
+    "PIB Per Capita de Paises con Sedes Argentinas según Región Geográfica",
     fontsize="20",
     fontweight="bold",
 )
 ax.set_xlabel("Región Geográfica", fontsize="15", fontweight="bold")
-ax.set_ylabel("PBI Per Capita(US$)", fontsize="15", fontweight="bold")
+ax.set_ylabel("PIB Per Capita(US$)", fontsize="15", fontweight="bold")
 ax.set_ylim(0, 110000)
 
 #%%% EJERCICIO 3
@@ -398,14 +398,15 @@ fig, ax = plt.subplots()
 
 # Elegimos representarlo con un scatter plot
 ax.scatter(
-    data=ejercicioI, x="sedes", y="pbi_pc_2022", s=20
+    data=ejercicioI, x="sedes", y="pib_pc_2022", s=20
 )
 
 # Agregamos titulo, etiquetas a los ejes y limita el rango de valores de los ejes
 ax.set_title(
-    "PBI Per Capita vs Cantidad de Sedes Argentinas", fontsize="20", fontweight="bold"
-)
+    "PIB Per Capita vs Cantidad de Sedes Argentinas", fontsize="20", fontweight="bold"
+)   
 ax.set_xlabel("Cantidad de Sedes Argentinas", fontsize="15", fontweight="bold")
-ax.set_ylabel("PBI Per Capita", fontsize="15", fontweight="bold")
+ax.set_ylabel("PIB Per Capita", fontsize="15", fontweight="bold")
+ax.xaxis.set_tick_params(labelsize=20)
 ax.set_xlim(-0.5, 12)
 ax.set_ylim(0, 110000)
