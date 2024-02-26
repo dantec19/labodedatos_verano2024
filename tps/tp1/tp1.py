@@ -29,7 +29,7 @@ pbi_per_capita = pd.read_csv(carpeta + "pbipercapita.csv", header=2)
 # Cambiamos los nombres de las columnas que usamos y tienen espacios o números
 # para facilitar las consultas de SQL
 pbi_per_capita = pbi_per_capita.rename(
-    columns={"Country Code": "codigo_pais", "2022": "pbi_pc_2022"}
+    columns={"Country Code": "pais_iso_3", "2022": "pbi_pc_2022"}
 )
 
 #%%% LIMPIEZA DE DATOS
@@ -41,10 +41,7 @@ pais = sql^"""
            SELECT DISTINCT s.pais_iso_3,
                            s.region_geografica,
                            s.pais_castellano AS nombre_pais,
-                           pbi.pbi_pc_2022
-           FROM   sede_completo AS s
-                  LEFT OUTER JOIN pbi_per_capita AS pbi
-                               ON s.pais_iso_3 = pbi.codigo_pais 
+           FROM   sede_completo AS s 
            """
 
 sede = sql^"""
@@ -55,6 +52,13 @@ sede = sql^"""
                   LEFT OUTER JOIN sede_secciones AS secc
                                ON s.sede_id = secc.sede_id 
            """
+           
+pib = sql^"""
+           SELECT DISTINCT pbi.pais_iso_3,
+                           pbi.pbi_pc_2022
+           FROM   pbi_per_capita AS pbi
+           """
+
 
 # La base redes es más difícil de armar, por lo que lo hacemos en varios pasos
 
@@ -105,23 +109,27 @@ orden del reporte debe respetar la cantidad de sedes (de manera
 descendente). En caso de empate, ordenar alfabéticamente por nombre de
 país.
 """
-
 # Empezamos obteniendo la cantidad de sedes de cada país
 
 # Conseguimos la tabla con las sedes de los paises sin repetir
 sedes_de_pais = sql^"""
-                    SELECT DISTINCT s.pais_iso_3,
-                                    s.sede_id
-                    FROM   sede AS s
+                    SELECT DISTINCT pib.pais_iso_3, s.sede_id
+                    FROM   pib
+                    LEFT OUTER JOIN sede AS s ON pib.pais_iso_3 = s.pais_iso_3
                     """
 
 # La cantidad de apariciones de un país en la anterior tabla nos indica cuántas
 # sedes tiene este
+
+"""CASE 
+    WHEN sp.sede_id IS NULL THEN 0
+    ELSE Count(sp.pais_iso_3) 
+END AS sedes"""
 cuenta_sedes_por_pais = sql^"""
                             SELECT DISTINCT sp.pais_iso_3,
-                                            Count(sp.pais_iso_3) AS sedes
+                                            Count(sp.pais_iso_3)       
                             FROM   sedes_de_pais AS sp
-                            GROUP  BY sp.pais_iso_3 
+                            GROUP  BY sp.pais_iso_3
                             """
 
 # Ahora pasamos a conseguir la cantidad de secciones en promedio que posee cada
