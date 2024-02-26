@@ -58,7 +58,7 @@ pib = sql^"""
                            pbi.pbi_pc_2022
            FROM   pbi_per_capita AS pbi
            """
-
+           
 
 # La base redes es más difícil de armar, por lo que lo hacemos en varios pasos
 
@@ -118,19 +118,26 @@ sedes_de_pais = sql^"""
                     LEFT OUTER JOIN sede AS s ON pib.pais_iso_3 = s.pais_iso_3
                     """
 
-# La cantidad de apariciones de un país en la anterior tabla nos indica cuántas
-# sedes tiene este
+# Conseguimos la cantidad de sedes de los países con al menos una sede
+cantidad_sedes = sql^"""
+           SELECT DISTINCT sp.pais_iso_3,
+                           Count(sp.pais_iso_3) AS cantidad    
+           FROM   sedes_de_pais AS sp
+           WHERE sp.sede_id IS NOT NULL
+           GROUP  BY sp.pais_iso_3
+          """
 
-"""CASE 
-    WHEN sp.sede_id IS NULL THEN 0
-    ELSE Count(sp.pais_iso_3) 
-END AS sedes"""
+# Los juntamos con los que no tienen sedes, a los que le ponemos 0 en cantidad
 cuenta_sedes_por_pais = sql^"""
-                            SELECT DISTINCT sp.pais_iso_3,
-                                            Count(sp.pais_iso_3)       
+                            SELECT DISTINCT sp.pais_iso_3, 
+                                            CASE 
+                                               WHEN cantidad IS NULL THEN 0 
+                                               ELSE cantidad 
+                                            END AS sedes
                             FROM   sedes_de_pais AS sp
-                            GROUP  BY sp.pais_iso_3
+                            LEFT OUTER JOIN cantidad_sedes AS cs ON cs.pais_iso_3 = sp.pais_iso_3
                             """
+
 
 # Ahora pasamos a conseguir la cantidad de secciones en promedio que posee cada
 # sede
@@ -157,18 +164,21 @@ promedio_secciones = sql^"""
 # Juntamos el nombre de los paises, la cantidad de sedes, el promedio de
 # secciones por sede y el pbi per capita
 ejercicioI = sql^"""
-                 SELECT DISTINCT Upper(p.nombre_pais) AS nombre_pais,
+                 SELECT DISTINCT pib.pais_iso_3,
                                  cs.sedes,
-                                 ps.secciones_promedio,
-                                 p.pbi_pc_2022
-                 FROM   pais AS p
+                                 CASE
+                                     WHEN cs.sedes = 0 THEN 0
+                                     ELSE ps.secciones_promedio 
+                                 END AS promedio_sedes,
+                                 pib.pbi_pc_2022
+                 FROM   pib
                         INNER JOIN cuenta_sedes_por_pais AS cs
-                                ON p.pais_iso_3 = cs.pais_iso_3
-                        INNER JOIN promedio_secciones AS ps
-                                ON p.pais_iso_3 = ps.pais_iso_3
-                 WHERE  p.pbi_pc_2022 IS NOT NULL
+                                ON pib.pais_iso_3 = cs.pais_iso_3
+                        LEFT OUTER JOIN promedio_secciones AS ps
+                                ON pib.pais_iso_3 = ps.pais_iso_3
+                 WHERE  pib.pbi_pc_2022 IS NOT NULL
                  ORDER  BY cs.sedes DESC,
-                           p.nombre_pais ASC 
+                           pib.pais_iso_3 ASC 
                  """
 # Imprimimos el resultado
 print(consigna, ejercicioI)
@@ -185,10 +195,11 @@ de dichos países. Ordenar por el promedio del PBI per Cápita.
 pbi_paises_con_sede = sql^"""
                           SELECT DISTINCT p.region_geografica,
                                           p.pais_iso_3,
-                                          p.pbi_pc_2022
+                                          pib.pbi_pc_2022
                           FROM   pais AS p
                                  INNER JOIN sede AS s
                                          ON p.pais_iso_3 = s.pais_iso_3
+                                 INNER JOIN pib ON p.pais_iso_3 = pib.pais_iso_3
                           """
 
 # Conseguimos la cantidad de países con sedes argentinas en cada región
@@ -396,5 +407,5 @@ ax.set_title(
 )
 ax.set_xlabel("Cantidad de Sedes Argentinas", fontsize="15", fontweight="bold")
 ax.set_ylabel("PBI Per Capita", fontsize="15", fontweight="bold")
-ax.set_xlim(0, 12)
+ax.set_xlim(-0.5, 12)
 ax.set_ylim(0, 110000)
