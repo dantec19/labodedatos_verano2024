@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Feb 16 15:51:27 2024
-
-@author: dantec19
+autores: Dante Cocú, Solana Navarro, Tomás Uriel Said
+tema: Trabajo Práctico 01. Evaluación del manejo de datos y su visualización
+fecha de entrega: 26 de febrero de 2024 
 """
 
 #%% PROCESAMIENTO Y LIMPIEZA DE DATOS
@@ -14,7 +15,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Las bases de datos necesarias para el TP las guardamos en la carpeta datasets
-carpeta = "datasets/"
+carpeta = "TablasOriginales/"
 
 # Cargamos los datos de las sedes
 sede_basico = pd.read_csv(carpeta + "sede-basico.csv")

@@ -1,0 +1,572 @@
+,pais_iso_3,sede_id,sede_desc
+0,HTI,EHAIT,Administración
+1,THA,ETAIL,Agregado  Administrativo
+2,ECU,CGUAY,AGREGADO  CONSULAR
+3,RUS,EFRUS,Agregaduría  Agrícola
+4,ISR,EISRA,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+5,ZAF,ESAFR,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+6,BOL,EBOLV,Agregaduría  de  Gendarmería  Nacional  Argentina  (GNA)
+7,NGA,ENIGE,Asuntos  Culturales  y  Prensa
+8,KEN,EKENY,Asuntos  Multilaterales  (PNUMA-ONU  Hábitat)
+9,MEX,CPCAR,Cónsul  Adjunto
+10,ECU,CGUAY,CONSULAR
+11,CAN,ECANA,Jefe  de  Cancillería
+12,HUN,EUNGR,Jefe  de  Cancillería
+13,ARM,EARME,Sección  Administrativa
+14,ZAF,ESAFR,Sección  Administrativa
+15,CHL,EHILE,Sección  Administrativa
+16,AUT,ETRIA,Sección  Bilateral
+17,EGY,EEGIP,Sección  Comercial
+18,ESP,CBARC,"Sección  Comercial, Turismo  e  Inversiones"
+19,IND,CGMUM,Sección  Consular
+20,NOR,ENORU,Sección  Consular
+21,KOR,ECORE,Sección  Consular
+22,DZA,EARGE,Sección  Consular
+23,NZL,ENZEL,Sección  Consular
+24,ARE,EEARB,Sección  Consular
+25,SWE,ESUEC,Sección  Consular
+26,FRA,EFRAN,Sección  Consular
+27,BOL,CSCRS,Seccion  Cultural
+28,CAN,ECANA,Sección  Cultural
+29,IDN,EISIA,Sección  Cultural
+30,EGY,EEGIP,Sección  Cultural
+31,HUN,EUNGR,Sección  Cultural
+32,PER,EPERU,"Sección  Cultural, Educación  y  Prensa"
+33,COL,ECOLO,"Sección  Cultural, Educativa  y  Cooperación  Judicial"
+34,RUS,EFRUS,"Sección  de  Cultura, Turismo  y  Cooperación  Deportiva"
+35,HTI,EHAIT,Sección  de  Prensa
+36,LBY,ELBIA,Sección  Económica  Comercial
+37,RUS,EFRUS,Sección  Económica  y  Comercial
+38,VEN,EVENE,Sección  Económica  y  Comercial
+39,AGO,EANGO,Sección  Económica  y  Comercial
+40,TUR,ETURQ,Sección  Económica  y  Comercial
+41,ESP,CVIGO,Sección  Económica  y  Comercial
+42,IND,EINDI,Sección  Económica  y  Comercial
+43,BRA,CRECI,Sección  Económica  y  Comercial
+44,PAN,EPNMA,Sección  Económica  y  Comercial
+45,ITA,EITAL,Sección  Económica  y  Promoción  de  Inversiones
+46,CAN,ECANA,"Sección  Económica-Comercial, Cooperación  e  Innovación"
+47,ECU,EECUA,Sección  Educación  y  Cooperación
+48,CHN,CSHAN,Sección  Educativa
+49,CHN,ECHIN,Sección  Inversiones
+50,PER,EPERU,Sección  Política  
+51,EGY,EEGIP,Sección  Política
+52,HUN,EUNGR,Sección  Política
+53,IDN,EISIA,Sección  Política
+54,ISR,EISRA,Sección  Política  y  Cultural
+55,GRB,ERUNI,Seccion  Prensa
+56,CHL,EHILE,Sección  Prensa
+57,PHL,EFILI,Josefina  Marcela  Gallo  Morando
+58,BRA,CURUG,Sección  Comercial
+59,VAT,ESSED,Sección  Cultura
+60,AZE,EAZER,Sección  Económica  y  Comercial
+61,ESP,CTENE,
+62,CHL,CSIGO,
+63,URY,CMALD,
+64,URY,CSLTO,
+65,USA,ENAUN,
+66,PRY,CENCA,
+67,USA,CHOUS,
+68,CAN,CMREA,
+69,LCA,ELUCI,
+70,SEN,ESENE,
+71,USA,CATLA,
+72,CZE,ECHES,Administración
+73,USA,CNYOR,Administración
+74,USA,EEEUU,Agregaduria  Aeronautica
+75,CHN,CHONG,Asuntos  Consulares
+76,USA,CNYOR,Comunidad  argentina  y  diplomacia  pública
+77,BEL,ECEUR,Consejería  Agrícola
+78,KEN,EKENY,Consular  
+79,ESP,EESPA,Jefe  de  Misión  Adjunto
+80,BOL,EBOLV,Misión  Naval  Argentina
+81,SLV,ESALV,Prensa
+82,CHL,EHILE,Residencia  Oficial
+83,DEU,EALEM,Sección  Administración
+84,AUS,EAUST,Sección  Administrativa
+85,AUS,CSIDN,Sección  Administrativa
+86,QAT,EQATR,Seccion  Administrativa
+87,BEL,ECEUR,Sección  Administrativa
+88,ITA,CMILA,Sección  Administrativa  -  Titular:  
+89,BRA,CRECI,Sección  Administrativa  y  Contable
+90,AUS,EAUST,Sección  Ciencia  y  Tecnología
+91,DNK,EDINA,Sección  Comercial
+92,DEU,EALEM,Sección  Consular
+93,VNM,EVIET,Sección  Consular
+94,GRC,EGREC,Sección  Consular
+95,QAT,EQATR,Sección  Consular
+96,FIN,EFINL,Sección  Consular
+97,CAN,CTORO,SECCION  CONSULAR
+98,CRI,ERICA,Sección  Consular
+99,THA,ETAIL,Sección  Consular
+100,AUT,ETRIA,Sección  Consular
+101,MAR,EMARR,Sección  Consular
+102,USA,CMIAM,Sección  Consular  (Documentación)
+103,NGA,ENIGE,Sección  Consular  Embajada  Argentina  en  Nigeria
+104,CUB,ECUBA,Sección  Cooperación
+105,BRB,EBARB,Sección  Cooperación  Internacional
+106,ECU,EECUA,Sección  Cultural
+107,DNK,EDINA,Sección  Cultural
+108,CUB,ECUBA,Sección  Cultural
+109,LBN,ELBNO,Sección  Cultural
+110,SUR,ESURI,Sección  Cultural
+111,USA,EEEUU,Sección  Cultural  y  de  Diplomacia  Pública
+112,SRB,ESERB,"Sección  Cultural, Educación  y  Turismo"
+113,MOZ,EMOZA,Sección  de  Cooperación  Internacional  y  Ayuda  Humanitaria
+114,BRB,EBARB,Sección  Económica  y  Comercial
+115,USA,EEEUU,Sección  Económica  y  Comercial
+116,KWT,EKUWA,Sección  Económica  y  Comercial
+117,TUN,ETUNE,Sección  Económica  y  Comercial
+118,VNM,EVIET,"Sección  Económica, Comercial  y  de  Inversiones"
+119,ARE,EEARB,"Sección  Económica, Comercial  y  de  Inversiones  /  Oficina  Comercial  en  Dubai"
+120,MYS,EMSIA,Sección  Política
+121,ECU,EECUA,Sección  Política
+122,LBN,ELBNO,Sección  Política
+123,SUR,ESURI,Sección  Política
+124,GRB,ERUNI,Seccion  Politica
+125,FRA,EFRAN,"Sección  Política, Asuntos  Juridicos  y  Derechos  Humanos"
+126,BOL,EBOLV,"Sección  Política, Fronteras, Defensa  y  Seguridad"
+127,CHN,CSHAN,Sección  Turismo
+128,USA,CNYOR,Visas
+129,VAT,ESSED,Jefa  de  Cancillería
+130,BEL,EBELG,Jefe  de  Cancillería
+131,BRA,CRIOJ,Sección  Consular
+132,BEL,EBELG,Sección  Cultural
+133,BEL,EBELG,Sección  Política
+134,DEU,CFRAN,Sección  Económica  y  Comercial
+135,BOL,CCOCH,
+136,ESP,CMALL,
+137,SAU,EARAB,
+138,CHN,CBEIJ,
+139,URY,CFBEN,
+140,CHL,CVALP,
+141,BRA,CALEG,
+142,MEX,CMEXI,
+143,BOL,CTARI,
+144,BGR,EBULG,
+145,PRY,EPARA,
+146,CHN,CGUAN,
+147,CHN,ECHIN,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+148,MEX,EMEXI,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+149,CHL,EHILE,Agregaduria  Militar
+150,USA,EEEUU,Agregaduria  Naval
+151,AUT,ETRIA,Asuntos  ONUDD
+152,HTI,EHAIT,Cooperación  Internacional
+153,SLV,ESALV,Cultural
+154,DEU,EALEM,Jefa  de  Cancillería
+155,TUN,ETUNE,Jefe  de  Cancillería
+156,IND,EINDI,Jefe  de  Cancilleria
+157,USA,EEEUU,Jefe  de  Cancillería
+158,PER,EPERU,Jefe  de  Cancillería
+159,BRB,EBARB,Jefe  de  Cancillería
+160,FRA,EFRAN,Oficina  Turismo
+161,TTO,ETRIN,Sección
+162,DOM,EDOMI,Sección  Administración
+163,FRA,EFRAN,Sección  Administrativa
+164,CHN,ECHIN,Sección  Administrativa
+165,HND,EHOND,Sección  administrativa
+166,DZA,EARGE,Sección  Administrativa
+167,NGA,ENIGE,Sección  Administrativa
+168,ESP,EESPA,Sección  Administrativa  y  Recursos  Humanos
+169,AUS,EAUST,Sección  Comercio  e  Inversiones
+170,ETH,EETIO,Sección  Consular
+171,JAM,EJAMA,Sección  Consular  
+172,ARM,EARME,Sección  Consular
+173,DOM,EDOMI,Sección  Consular
+174,SYR,EASIR,Sección  Consular
+175,HTI,EHAIT,Sección  Consular
+176,NIC,ENICA,SECCION  CONSULAR
+177,ITA,CMILA,Sección  Consular:  Cónsul  Adjunto  Lara  Fazzolari
+178,KWT,EKUWA,Sección  Cultural
+179,USA,CMIAM,Sección  Cultural
+180,MOZ,EMOZA,Sección  de  Administración  y  Finanzas
+181,ITA,EITAL,Sección  de  Cooperación  Internacional
+182,AUT,ETRIA,Sección  de  Cooperación  Jurídica
+183,MEX,EMEXI,Sección  de  Prensa
+184,PAK,EPAKI,Sección  Económica
+185,ECU,EECUA,Sección  Económica  y  Comercial
+186,ROU,ERUMA,Sección  Económica  y  Comercial
+187,CUB,ECUBA,Sección  Económica  y  Comercial
+188,MYS,EMSIA,Sección  Económica  y  Comercial
+189,CHN,CSHAN,Sección  Económica  y  Comercial
+190,GTM,EGUAT,Sección  Económica  y  Comercial
+191,SUR,ESURI,Sección  Económica  y  Comercial
+192,GRB,ERUNI,"Sección  Económica, Comercial  y  Turismo"
+193,COL,ECOLO,"Sección  Económica, Comercial  y  Turismo"
+194,FRA,EFRAN,Sección  Organismos  Internacionales  Económicos
+195,USA,EEEUU,Sección  Política
+196,TUN,ETUNE,Sección  Política
+197,BRB,EBARB,Sección  Política
+198,DZA,EARGE,Sección  Prensa
+199,USA,CNYOR,Turismo
+200,URY,EURUG,Jefe  de  Cancillería
+201,VAT,ESSED,"Sección  Administración, Economato, Contabilidad  e  Inventario"
+202,URY,EURUG,Sección  Comercial
+203,URY,EURUG,Sección  Cultural
+204,BEL,EBELG,Sección  Económica  y  Comercial
+205,URY,EURUG,Sección  Política
+206,DEU,CFRAN,Sección  Cultural
+207,URY,EMSUR,
+208,BGD,EBANG,
+209,USA,EEOEA,
+210,BRA,CFLOR,
+211,FRA,EUNES,
+212,ARG,DIGAC,
+213,PER,CLIMA,
+214,ECU,EECUA,Administración  y  Logística
+215,JPN,EJAPO,Administrativa
+216,CHL,EHILE,Agregaduria  Aeronáutica
+217,SUR,ESURI,Agregaduria  de  Defensa
+218,BOL,EBOLV,Agregaduría  de  Prefectura  Naval
+219,USA,EEEUU,Agregaduria  Militar
+220,TUN,ETUNE,Asuntos  Culturales  
+221,TUN,ETUNE,Cooperación  Internacional
+222,GRB,ERUNI,Económica  y  Comercial
+223,CHL,EHILE,Jefe  de  Cancillería
+224,BOL,EBOLV,"Mujeres, Género, Diversidad  y  Medio  Ambiente"
+225,GRB,ERUNI,Protocolo
+226,USA,CMIAM,Sección  Administración
+227,CAN,ECANA,Sección  Administrativa
+228,BOL,CSCRS,Sección  Administrativa
+229,EGY,EEGIP,Sección  Administrativa
+230,HUN,EUNGR,Sección  Administrativa
+231,SRB,ESERB,Sección  Administrativa
+232,LBN,ELBNO,Sección  Administrativa  Contable
+233,RUS,EFRUS,Sección  Administrativa  y  Logística
+234,USA,EEEUU,Sección  Administrativa  y  Recursos  Humanos
+235,AUS,CSIDN,Sección  Comercial  y  Cultural
+236,RUS,EFRUS,Sección  Concurrencias
+237,BRB,EBARB,Sección  Consular
+238,ISR,CGTEL,Sección  Consular
+239,KWT,EKUWA,Sección  Consular
+240,TUN,ETUNE,Sección  Consular
+241,USA,EEEUU,Sección  Consular
+242,NLD,EPBAJ,Sección  Consular
+243,SLV,ESALV,Sección  Consular  
+244,CHN,ECHIN,Sección  Consular  (Ir  a  Consulados)
+245,USA,CMIAM,Sección  Consular  (Notariales)
+246,USA,CMIAM,Sección  Consular  (Visas  y  Asistencia  a  Argentinos)
+247,DEU,EALEM,Sección  Cooperación  Internacional
+248,ETH,EETIO,Sección  Cultural
+249,HTI,EHAIT,Sección  Cultural
+250,CHL,EHILE,Sección  Cultural
+251,PER,EPERU,Sección  de  Cooperación  Judicial  y  Asuntos  de  Género
+252,LBN,ELBNO,Sección  Económica  -  Comercial  e  Inversiones
+253,GRC,EGREC,Sección  Económica  y  Comercial
+254,DEU,EALEM,Sección  Económica  y  Comercial
+255,MAR,EMARR,Sección  Económica  y  Comercial
+256,PER,EPERU,Sección  Económica  y  Comercial  
+257,CRI,ERICA,Sección  Económica  y  Comercial
+258,THA,ETAIL,Sección  Económica  y  Comercial
+259,BOL,EBOLV,"Sección  Económica, Comercial, de  Inversiones  y  Turismo."
+260,BRA,EBRAS,"Sección  Económico-Comercial, Inversiones  y  Turismo"
+261,ETH,EETIO,Sección  Política
+262,HTI,EHAIT,Sección  Política
+263,CHL,EHILE,Sección  Política
+264,VNM,EVIET,Sección  Política  y  Cooperación
+265,ESP,EESPA,Sección  Política  y  Cooperación  Jurídica
+266,GRB,ERUNI,Sección  Política  y  Coordinación
+267,BEL,ECEUR,Sección  Prensa  y  Diplomacia  Pública
+268,PHL,EFILI,Andrea  Silvina  Repetti
+269,BRA,CRIOJ,Sección  Económica  y  Comercial
+270,DEU,CFRAN,Sección  Consular
+271,GRB,CLOND,
+272,TUR,CGEST,
+273,CHL,CPMON,
+274,CHL,CAREN,
+275,BRA,CSBAH,
+276,BRA,CBELO,
+277,GTM,EGUAT,Agregada  Administrativa
+278,BRA,EBRAS,Agregado  Naval
+279,CHN,ECHIN,Agregaduría  Agrícola
+280,CHL,EHILE,Agregaduría  de  Defensa  y  Aeronáutica
+281,EGY,EEGIP,Agregaduría  Militar
+282,BEL,ECEUR,Cancillería
+283,KEN,EKENY,Cultural
+284,PRT,EPORT,JEFE  DE  SECCIÓN  CULTURAL
+285,MEX,EMEXI,Negociaciones  Económicas  Bilaterales
+286,ITA,EITAL,"Oficina  de  Derechos  Humanos, Géneros  y  Diversidad"
+287,DNK,EDINA,Sección  Administrativa
+288,CUB,ECUBA,Sección  Administrativa
+289,SUR,ESURI,Sección  Administrativa
+290,POL,EPOLO,Sección  Comercial
+291,SLV,ESALV,Sección  Comercial  e  Inversiones
+292,SGP,ESING,Sección  Consular
+293,BRA,EBRAS,Sección  Consular
+294,RUS,EFRUS,Sección  Consular
+295,COL,ECOLO,Sección  Consular
+296,VEN,EVENE,Sección  Consular
+297,AGO,EANGO,Sección  Consular
+298,TUR,ETURQ,Sección  Consular
+299,PAK,EPAKI,Sección  Consular
+300,ESP,CVIGO,Sección  Consular
+301,PAN,EPNMA,Sección  Consular
+302,HND,EHOND,Sección  Consular
+303,IRN,EIRAN,Sección  Consular
+304,JPN,EJAPO,Sección  Consular
+305,BRA,CRECI,Sección  Consular
+306,MOZ,EMOZA,Sección  Consular
+307,CHE,ESUIZ,Sección  Consular
+308,LBY,ELBIA,Sección  Consular
+309,ESP,CBARC,Sección  Consular  (Documentación/Asuntos  previsionales)
+310,USA,CMIAM,Sección  Consular  (Trámites  generales)
+311,FRA,EFRAN,Sección  Cooperación  Internacional
+312,ESP,CBARC,"Sección  Cultura, Educación  y  Redes  Sociales"
+313,AUS,EAUST,Seccion  Cultural
+314,IRL,EIRLA,Sección  Cultural
+315,CZE,ECHES,Sección  Cultural
+316,BRA,CRECI,Sección  Cultural  
+317,JPN,EJAPO,Sección  Cultural  
+318,POL,EPOLO,Sección  Cultural
+319,UKR,EUCRA,Sección  Cultural
+320,ITA,EITAL,"Sección  de  Diplomacia  Pública, Comunicación  y  Prensa"
+321,ITA,EITAL,Sección  de  Promoción  Comercial  y  Turismo
+322,IND,CGMUM,Sección  Económica  y  Comercial
+323,CHN,ECHIN,Sección  Económica  y  Comercial
+324,NOR,ENORU,Sección  Económica  y  Comercial
+325,KOR,ECORE,Sección  Económica  y  Comercial
+326,DZA,EARGE,Sección  Económica  y  Comercial
+327,NZL,ENZEL,Sección  Económica  y  Comercial
+328,NGA,ENIGE,Sección  Económica  y  Comercial
+329,JAM,EJAMA,Sección  Económica  y  Comercial
+330,MOZ,EMOZA,Sección  Económica  y  Comercial  
+331,SGP,ESING,"Sección  Económica, Comercial  y  de  Inversiones"
+332,CHE,ESUIZ,"Sección  Económica, Comercial  y  de  Inversiones"
+333,FRA,EFRAN,"Sección  Económica, Comercial, Promoción  e  Inversiones"
+334,HND,EHOND,Sección  Encargado  Cancillería
+335,RUS,EFRUS,"Sección  Energía, Ciencia  y  Tecnología"
+336,AUS,EAUST,Sección  Política
+337,IRL,EIRLA,Sección  Política
+338,BEL,ECEUR,Sección  Política
+339,UKR,EUCRA,Sección  Política
+340,ESP,EESPA,"Sección  Política, Prensa  y  Comunicación"
+341,CHN,CSHAN,Sección  Prensa
+342,ECU,EECUA,Sección  Prensa
+343,PHL,EFILI,Ana  Clara  Pianezza  
+344,AZE,EAZER,Sección  Consular
+345,DEU,CHAMB,
+346,URY,CMDEO,
+347,BOL,CVILL,
+348,ESP,CMADR,
+349,BOL,CGPAZ,
+350,PSE,REPAL,
+351,SLV,ESALV,Administrativa  -  Contable
+352,TUR,ETURQ,Agregada  para  Asuntos  Administrativos
+353,BRA,EBRAS,Agregado  Militar  y  de  Defensa
+354,BOL,EBOLV,Agregaduría  Aeronáutica
+355,PER,EPERU,Agregaduria  de  Defensa  y  Aeronáutica
+356,KWT,EKUWA,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+357,CHL,EHILE,Agregaduría  Naval
+358,USA,CNYOR,Asistencia  a  Argentinos  en  el  Exterior
+359,RUS,EFRUS,Asuntos  Estratégicos
+360,USA,EEEUU,Consejería  Agrícola
+361,FRA,EFRAN,Jefe  de  Cancillería
+362,NGA,ENIGE,Jefe  de  Cancillería
+363,MEX,EMEXI,Jefe  de  Misión
+364,USA,CNYOR,Promoción  Cultural
+365,NLD,EPBAJ,Rep.  Permanente  OPAQ
+366,BRB,EBARB,Sección  Administrativa
+367,KWT,EKUWA,Sección  Administrativa
+368,ISR,CGTEL,Sección  Administrativa
+369,PER,EPERU,Sección  Administrativa
+370,MEX,EMEXI,Sección  Comercial
+371,FIN,EFINL,Sección  Comercial  y  de  Inversiones
+372,EGY,EEGIP,Sección  Consular
+373,SRB,ESERB,Sección  Consular
+374,USA,CCHIC,Sección  Consular
+375,BOL,CSCRS,Sección  Consular
+376,HUN,EUNGR,Sección  Consular
+377,IDN,EISIA,Sección  Consular
+378,ESP,CBARC,Sección  Consular  (Opción  de  Nacionalidad/Notariales/Itinerancias)
+379,MEX,EMEXI,Sección  Cultural
+380,NOR,ENORU,Sección  Cultural
+381,DZA,EARGE,Sección  Cultural
+382,JAM,EJAMA,Sección  Cultural
+383,FRA,EFRAN,Sección  Cultural
+384,BRB,EBARB,Sección  Cultural  y  Prensa
+385,ZAF,ESAFR,"Sección  Cultural, Prensa  y  Diplomacia  Pública"
+386,IND,CGMUM,Sección  de  Administración
+387,KOR,ECORE,Sección  de  Administración  
+388,AUT,ETRIA,Sección  de  DDHH  y  Género
+389,MOZ,EMOZA,Sección  de  Prensa  y  Difusión
+390,RUS,EFRUS,Sección  de  Prensa  y  Difusión
+391,ESP,EESPA,Sección  Económica  -  Comercial
+392,IRL,EIRLA,Sección  Económica  y    Comercial
+393,BEL,ECEUR,Sección  Económica  y  Comercial
+394,USA,CNYOR,Sección  Económica  y  Comercial
+395,CZE,ECHES,Sección  Económica  y  Comercial
+396,UKR,EUCRA,Sección  Económica  y  Comercial
+397,CHN,CHONG,Sección  Económica-Comercial
+398,SWE,ESUEC,"Sección  Económica, Comercial  y  de  Promoción  de  Inversiones"
+399,CHN,ECHIN,Sección  Política
+400,DZA,EARGE,Sección  Política
+401,ARE,EEARB,Sección  Política
+402,KOR,ECORE,Sección  Política
+403,MEX,EMEXI,Sección  Política
+404,NGA,ENIGE,Sección  Política
+405,NZL,ENZEL,Sección  Política
+406,SWE,ESUEC,Sección  Política
+407,COL,ECOLO,"Sección  Política, Tecnología  y  Ciencia"
+408,VNM,EVIET,Sección  Prensa  y  Cultura
+409,CHL,EHILE,Secretaría  Privada
+410,DEU,CFRAN,Sección  Administrativa
+411,BRA,CFDIG,
+412,USA,CLANG,
+413,URY,CPAYS,
+414,ITA,CROMA,
+415,CHL,CANTO,
+416,CHL,CCONC,
+417,PRY,CCEST,
+418,KEN,EKENY,Administración
+419,PRT,EPORT,Agregado  Administrativo
+420,DEU,EALEM,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+421,GRB,ERUNI,"Agregaduría  de  Defensa, Militar, Naval  y  Fuerza  Aérea"
+422,USA,CMIAM,Cónsul  General  Adjunto
+423,BOL,EBOLV,Embajador  Extraordinario  y  Plenipotenciario  de  la  República  Argentina  
+424,CHE,ESUIZ,Jefe  de  Cancillería
+425,RUS,EFRUS,Jefe  de  Cancillería
+426,PRT,EPORT,JEFE  DE  CANCILLERIA
+427,MOZ,EMOZA,Jefe  de  Cancillería
+428,PAN,EPNMA,Jefe  de  Cancillería
+429,ITA,EITAL,Jefe  de  Cancillería
+430,COL,ECOLO,Jefe  de  Cancillería
+431,BRA,EBRAS,Jefe  de  Cancillería
+432,PRT,EPORT,JEFE  DE  SECCIÓN  CONSULAR
+433,PRT,EPORT,JEFE  DE  SECCIÓN  ECONÓMICA  Y  COMERCIAL
+434,JPN,EJAPO,Política
+435,KEN,EKENY,Política  y  Cooperación    
+436,USA,EEEUU,Prensa
+437,TUN,ETUNE,Prensa
+438,ESP,EESPA,Representante  Ministerio  de  Desarrollo  Productivo
+439,MAR,EMARR,Sección  Administrativa
+440,GRC,EGREC,Sección  Administrativa
+441,IND,EINDI,Sección  Agrícola
+442,HND,EHOND,Sección  Comercial
+443,IRL,EIRLA,Sección  Consular
+444,USA,CNYOR,Sección  Consular
+445,CZE,ECHES,Sección  Consular
+446,AUS,CSIDN,Sección  Consular
+447,UKR,EUCRA,Sección  Consular
+448,ESP,CBARC,Sección  Consular  (Asistencia  al  ciudadano/Visas)
+449,AGO,EANGO,Sección  Cooperación
+450,CAN,CTORO,SECCION  CULTURAL
+451,VEN,EVENE,Sección  Cultural
+452,MOZ,EMOZA,Sección  Cultural
+453,TUR,ETURQ,Sección  Cultural
+454,ESP,CVIGO,Sección  Cultural
+455,GRB,ERUNI,Sección  Cultural
+456,BRA,EBRAS,Sección  Cultural
+457,CHE,ESUIZ,Sección  Cultural
+458,SWE,ESUEC,Sección  Cultural  y  de  Prensa
+459,ITA,EITAL,"Sección  Cultural, Educación, Ciencia  y  Tecnología  "
+460,BOL,EBOLV,"Sección  Cultural, Prensa, Educación, Derechos  Humanos  y  de  Cooperación  Técnica"
+461,DEU,EALEM,Sección  de  Prensa
+462,SRB,ESERB,Sección  Económica  y  Comercial
+463,BOL,CSCRS,Sección  Económica  y  Comercial
+464,USA,CCHIC,Sección  Económica  y  Comercial
+465,IDN,EISIA,Sección  Económica  y  Comercial
+466,NLD,EPBAJ,"Sección  Económica  y  Comercial, Prensa  y  Turismo."
+467,ISR,EISRA,Sección  Económico-Comercial  y  de  Cooperación
+468,CHE,ESUIZ,Sección  Política
+469,VEN,EVENE,Sección  Política
+470,AGO,EANGO,Sección  Política
+471,RUS,EFRUS,Sección  Política
+472,ITA,EITAL,Sección  Política
+473,IND,EINDI,Sección  Política
+474,MOZ,EMOZA,Sección  Política
+475,PHL,EFILI,Mauricio  Germán  Muñoz
+476,AZE,EAZER,Sección  Cultural
+477,AZE,EAZER,Sección  de  Administración
+478,AZE,EAZER,Sección  Política
+479,VAT,ESSED,"Sección  Prensa, Redes  Sociales  y  Comunicación"
+480,URY,CCOLO,
+481,BOL,CYACU,
+482,ESP,CCADI,
+483,CAN,CGVAN,
+484,GRB,ERUNI,Administración
+485,PAN,EPNMA,Agregada  Administrativa
+486,IDN,EISIA,Agregado  Administrativo
+487,BOL,EBOLV,Agregaduría  de  Defensa  y  Militar
+488,RUS,EFRUS,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+489,GRB,ERUNI,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+490,COL,ECOLO,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+491,ITA,EITAL,"Agregaduría  de  Defensa, Militar, Naval  y  Aeronáutica"
+492,CHL,EHILE,Agregaduría  de  Gendarmería  Nacional
+493,ECU,EECUA,Agregaduria  Militar
+494,AUT,ETRIA,"Asuntos  Nucleares  (OIEA, CTBTO, Zangger  C., NSG)"
+495,AUT,ETRIA,Asuntos  ONUAEE
+496,AUT,ETRIA,Asuntos  ONUDI
+497,BRA,EBRAS,Consejería  Agrícola
+498,BOL,EBOLV,Contabilidad  y  Administración.
+499,JPN,EJAPO,Cooperación
+500,KEN,EKENY,Económica  -  Comercial
+501,QAT,EQATR,Jefe  de  Cancillería
+502,THA,ETAIL,Jefe  de  Cancillería
+503,CHN,ECHIN,Jefe  de  Cancilleria
+504,SGP,ESING,Sección  Administrativa
+505,ESP,CBARC,Sección  Administrativa
+506,ITA,EITAL,Sección  Administrativa
+507,VEN,EVENE,Sección  Administrativa
+508,AGO,EANGO,Sección  Administrativa
+509,COL,ECOLO,Sección  Administrativa
+510,MEX,EMEXI,Sección  Administrativa  y  Recursos  Humanos  
+511,QAT,EQATR,Sección  Comercial
+512,AUT,ETRIA,Sección  Comercial
+513,USA,CMIAM,Sección  Comercial  e  Inversiones
+514,ECU,EECUA,Sección  Consular
+515,ROU,ERUMA,Sección  Consular
+516,DNK,EDINA,Sección  Consular
+517,MYS,EMSIA,Sección  Consular
+518,SUR,ESURI,Sección  Consular
+519,GTM,EGUAT,Sección  Consular
+520,CHN,CSHAN,Sección  Consular
+521,BRA,CPABL,Sección  Consular
+522,LBN,ELBNO,Sección  Consular
+523,CUB,ECUBA,Sección  Consular
+524,ITA,CMILA,Sección  Consular  -  Cónsul  Adjunto  Agustín  Busignani  
+525,POL,EPOLO,Sección  Consular  de  la  Embajada  de  la  República  Argentina  en  la  República  de  Polonia
+526,ESP,EESPA,"Sección  Cultura, Educación  y  Protocolo"
+527,DEU,EALEM,Sección  Cultural
+528,CHN,CSHAN,Sección  Cultural  
+529,GRC,EGREC,Sección  Cultural
+530,AUT,ETRIA,Sección  Cultural
+531,THA,ETAIL,Sección  Cultural
+532,MAR,EMARR,Sección  Cultural
+533,AGO,EANGO,Sección  Cultural  y  Prensa
+534,KOR,ECORE,"Sección  Cultural, Educación  y  Turismo"
+535,AUT,ETRIA,Sección  de  Administración
+536,CHN,CSHAN,Sección  Deportiva
+537,JPN,EJAPO,Sección  Económica  -  Comercial  
+538,ETH,EETIO,Sección  Económica  y  Comercial
+539,DOM,EDOMI,Sección  Económica  y  Comercial
+540,ARM,EARME,Sección  Económica  y  Comercial
+541,HTI,EHAIT,Sección  Económica  y  Comercial
+542,ZAF,ESAFR,Sección  Económica  y  Comercial
+543,CAN,CTORO,SECCION  ECONOMICA  Y  COMERCIAL
+544,CHL,EHILE,Sección  Económica  y  Comercial
+545,CHL,EHILE,Sección  Jurídica
+546,RUS,EFRUS,Sección  Malvinas  Antártida  y  Atlántico  Sur
+547,USA,CNYOR,Sección  Notarial
+548,DEU,EALEM,Sección  Política
+549,CZE,ECHES,Sección  Política  
+550,QAT,EQATR,Sección  Política
+551,MAR,EMARR,Sección  Política
+552,THA,ETAIL,Sección  Política
+553,SGP,ESING,Sección  Política  y  Cultural
+554,NLD,EPBAJ,Sección  Política/Jurídica  
+555,BRA,CRECI,Sección  Prensa
+556,DEU,EALEM,Sección  Turismo
+557,MEX,EMEXI,"Secciones  Cooperación, Educación, Turismo  y  Belice"
+558,VAT,ESSED,Embajadora
+559,VAT,ESSED,Jefa  de  Sección  Secretaría  y  Despacho
+560,BEL,EBELG,Sección  Consular
+561,BRA,CRIOJ,Sección  Cultural
+562,BRA,CRIOJ,Sección  Turismo
+563,CHE,EOIRS,
+564,GUY,EGUYA,
+565,DEU,CBONN,
+566,BRA,CCURI,
+567,ZAF,CJOHA,
+568,PRY,CASUN,
+569,CHN,OCCAT,
+570,ITA,EMFAO,
