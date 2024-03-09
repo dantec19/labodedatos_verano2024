@@ -1,0 +1,12 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+project_type = 'empty-project-type'
+recent_files = ['tp2.py', 'verImagenesTP2.py', '..\\tp1\\TP01-el_peligroso.py', '..\\..\\clases\\clase-15_Arboles\\clase-15_Arboles.py']
+
+[main]
+version = 0.2.0
+recent_files = []
+

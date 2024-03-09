@@ -6,23 +6,25 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import random
 
 carpeta = 'dataset/'
 
-def ver_imagen(registro):
-    pixeles = np.array(registro)
+def ver_imagen_promedio(label_letra: int, df):
+    registros_letra = df[df['label'] == label_letra]
+    letra_promediada = registros_letra.iloc[1:,1:].mean()
+    pixeles = np.array(letra_promediada)
     pixeles.reshape(28, 28)
     plt.matshow(pixeles.reshape(28, 28), cmap = "gray")
     
-def promediar_pixeles_letra(registros):
-    """
-    los registros tienen que ser de la misma letra
-    """
-    return registros.iloc[1:,1:].mean()
-
-
 def mediana_pixeles_letra(registros):
-    """
-    los registros tienen que ser de la misma letra
-    """
     return registros.median()
+
+
+
+def atributos_random(k):  
+    res = []
+    for i in range(k):
+        random.seed(i)
+        res.append(random.randint(1, 784))
+    return res
